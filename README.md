@@ -2,4 +2,4 @@
 
 run Game
 
-Requiremtns: tkinter, Pillow, Random 
+Requirements : tkinter, Pillow, Random 
