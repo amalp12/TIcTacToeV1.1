@@ -170,7 +170,7 @@ class Board:
         o = self.boardMemory.slots_takeno 
         statement = 'No Winners Announced'
         print(x,o)
-        if self.boardMemory.winner == 'Player X Won! \n Click anywhere to continue...' or self.boardMemory.winner == 'Player O Won! \n Click anywhere to continue...' or  self.boardMemory.winner == 'This Game is a Draw! \n Click anywhere to continue...':
+        if self.boardMemory.winner == 'Player X Won!' or self.boardMemory.winner == 'Player O Won!'  or  self.boardMemory.winner == 'This Game is a Draw!':
             clearAll(self.rootwin)
       
         try:
@@ -178,19 +178,19 @@ class Board:
             for i in self.boardMemory.winning_slots:
                     
                 if i[0] in x and i[1] in x and i[2] in x:
-                    statement = 'Player X Won! \n Click anywhere to continue...'
+                    statement = 'Player X Won!'
                     self.info.config(text = statement)
                     self.winner_announced = True 
                     self.endWindow()
                     
                 elif i[0] in o and i[1] in o and i[2] in o:
-                    statement = 'Player O Won! \n Click anywhere to continue...' 
+                    statement = 'Player O Won!' 
                     self.info.config(text = statement)
                     self.winner_announced = True
                     self.endWindow()
                     
                 elif len(list(self.boardMemory.slots.keys())) == 0 and self.winner_announced == False:
-                    statement = 'This Game is a Draw! \n Click anywhere to continue...'
+                    statement = 'This Game is a Draw!'
                     self.info.config(text = statement)  
                     self.winner_announced = True
                     self.endWindow()
