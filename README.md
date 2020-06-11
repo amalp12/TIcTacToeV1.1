@@ -1,8 +1,8 @@
 # TIcTacToeV1.0
+How to use: run Game.py
 
-run Game
+Requirements : Modules used - tkinter, Pillow, Random 
 
-Requirements : tkinter, Pillow, Random 
-
-ClearAll Fuction used to clear a tkinter window is bases on a stack overflow answer
+Sources:
+ClearAll Fuction used to clear a tkinter window is based on a stack overflow answer
 https://stackoverflow.com/questions/45905665/is-there-a-way-to-clear-all-widgets-from-a-tkinter-window-in-one-go-without-refe
