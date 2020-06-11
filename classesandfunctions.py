@@ -1,5 +1,4 @@
 
-import math
 import time
 import tkinter as tk
 from PIL import  ImageTk as itk 
