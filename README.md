@@ -1,4 +1,4 @@
-# TIcTacToeV1.0
+# TIcTacToeV1.2
 How to use: run Game.py
 
 Requirements : Modules used - tkinter, Pillow, Random 
