@@ -239,14 +239,14 @@ class Board:
             self.canvas.bind('<Button-1>', self.moveMouse)
 
     def endWindow(self):
-        startHumanBtn = tk.Button( self.rootwin, text = 'Play Again With a Friend', command = lambda :playWithFriend(self.rootwin)) 
-        startComputerBtn = tk.Button(self.rootwin, text = 'Play Again With Computer', command = lambda : playWithComputer(self.rootwin))
-        quitBtn = tk.Button(self.rootwin, text = 'Quit Game', command = lambda: self.rootwin.destroy())
+        startHumanBtn = tk.Button( self.rootwin,height = 2, width = 20, text = 'Play Again With a Friend', command = lambda :playWithFriend(self.rootwin)) 
+        startComputerBtn = tk.Button(self.rootwin,height = 2, width = 20, text = 'Play Again With Computer', command = lambda : playWithComputer(self.rootwin))
+        quitBtn = tk.Button(self.rootwin, height = 2, width = 20, text = 'Quit Game', command = lambda: self.rootwin.destroy())
 
         
-        startHumanBtn.pack()
-        startComputerBtn.pack()
-        quitBtn.pack()
+        startHumanBtn.pack(pady = 10)
+        startComputerBtn.pack(pady = 10)
+        quitBtn.pack(pady = 10)
 
 
             
@@ -571,7 +571,7 @@ class Computer(Player):
 
                     self.boardMemory.winner = self.checkWinner()
                     if self.winner_announced == True:
-                        self.canvas.unbind('<Button-1>', self.nearestWidgetC)
+                        self.canvas.unbind('<Button-1>', self.bindCanvas(self.nearestWidgetC))
                         self.info.config(text = 'Congratulations! You Have Won Against The Computer')
                     elif self.winner_announced == False:
                         self.playerx = True              
@@ -606,10 +606,10 @@ class Computer(Player):
                 elif tag == 7:  self.seven(tag)
                 elif tag == 8:  self.eight(tag)
                 elif tag == 9:  self.nine(tag)
+                                    # Checking if the prevous move decided a winner
+                self.boardMemory.winner = self.checkWinner()
                 
                 if self.winner_announced == False:
-                    # Checking if the prevous move decided a winner
-                    self.boardMemory.winner = self.checkWinner()
                     self.computerMove()
                 elif self.winner_announced == True:
                     self.canvas.unbind('<Button-1>', self.nearestWidgetC)
