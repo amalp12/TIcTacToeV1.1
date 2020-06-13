@@ -537,6 +537,7 @@ class Human(Player):
                 # Checking if the prevous move decided a winner
                 self.boardMemory.winner = self.checkWinner()
                 if self.winner_announced == True:
+                    
                     self.canvas.unbind('<Button-1>', self.nearestWidget)
                 
             else:
@@ -572,7 +573,8 @@ class Computer(Player):
                     self.boardMemory.winner = self.checkWinner()
                     if self.winner_announced == True:
                         self.canvas.unbind('<Button-1>', self.bindCanvas(self.nearestWidgetC))
-                        self.info.config(text = 'Congratulations! You Have Won Against The Computer')
+                        self.info.config(text = 'The Computer Has Won!')
+                        
                     elif self.winner_announced == False:
                         self.playerx = True              
                    
@@ -606,13 +608,18 @@ class Computer(Player):
                 elif tag == 7:  self.seven(tag)
                 elif tag == 8:  self.eight(tag)
                 elif tag == 9:  self.nine(tag)
-                                    # Checking if the prevous move decided a winner
+                                   
+                # Checking if the prevous move decided a winner
                 self.boardMemory.winner = self.checkWinner()
                 
                 if self.winner_announced == False:
+                                    
                     self.computerMove()
+                    
                 elif self.winner_announced == True:
-                    self.canvas.unbind('<Button-1>', self.nearestWidgetC)
+                    self.canvas.unbind('<Button-1>', self.bindCanvas(self.nearestWidgetC))
+                    
+                    
             else:
                 print('OnObjectClick Function not called')
             
