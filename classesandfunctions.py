@@ -300,8 +300,8 @@ class Player(Board):
 
     def setImages(self):
         # Importing image and keepin a reference so that garbage collection does not delete it
-        self.ximg = itk.PhotoImage(file = 'X.png')
-        self.oimg = itk.PhotoImage(file = 'O.png')
+        self.ximg = itk.PhotoImage(file = 'images/X.png')
+        self.oimg = itk.PhotoImage(file = 'images/O.png')
 
         self.labelx = tk.Label(image = self.ximg)
         self.labelo = tk.Label(image = self.oimg)
