@@ -14,10 +14,6 @@ In addition to playing against the unbeatable algorithm it also has the option t
 
 
 
-![ScreenShot](https://raw.githubusercontent.com/amalp12/Unbeatable-Tic-Tac-Toe/master/screenshots/recipe-landing.jpg)
-
-
-
 ![ScreenShot](https://raw.githubusercontent.com/amalp12/Unbeatable-Tic-Tac-Toe/master/screenshots/computer-win.png)
 
 
